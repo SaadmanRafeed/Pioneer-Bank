@@ -23,13 +23,70 @@
       </div>
  
 <!-- Transaction-Area -->
-<h1 id="transaction-area">Transaction Area</h1>
+<div id="transaction-area" >
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+
+<div class="deposit status">
+  <h5>Deposit</h5>
+  <h2>$00</h2>
+</div>
+    </div>
+    <div class="col-md-4  ">
+    <div class="withdraw status">
+      <h5>Withdraw</h5>
+      <h2>$00</h2>
+    </div>
+    
+    </div>
+    <div class="col-md-4 col-sm-12 ">
+      <div class="balance status">
+        <h5>Balance</h5>
+      <h2>$1240</h2>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Deposit and Withdraw Section -->
+  <div class="row  ">
+    <div class="col-md-6 form-area">
+
+      <div class="submit-area">
+        <h4>Deposit</h4>
+        <input id="deposit-amount" type=" text" placeholder="$ Amount that you want to deposit" class="form-control"> 
+        <br>
+        <button id="addDeposit" class="btn btn-success">Deposit</button>
+      </div>
+      </div>
+
+      
+    <div class="col-md-6 form-area">
+<div class="submit-area">
+  <h4>Withdraw</h4>
+  <input type=" text" placeholder="$ Amount that you want to withdraw" class="form-control"> <br>
+  <button class="btn btn-success">Withdraw</button>
+</div>
+</div>
+</div>
+
+      
+  </div>
+
+
+
+
+
+  
+
     
     
 
 
     
     <script>
+// LOGIN BUTTON EVENT handler
 
 const loginBtn= document.getElementById('login');
 loginBtn.addEventListener('click',function(event){
@@ -39,6 +96,16 @@ loginBtn.addEventListener('click',function(event){
  transactionArea.style.display='block';
 
 })
+
+// deposit button event handler
+const depositBtn= document.getElementById("addDeposit");
+depositBtn.addEventListener("click", function(){
+  const depositAmount= document.getElementById("deposit-amount").value;
+  const depositNumber= parseFloat(depositAmount);
+  console.log(depositNumber);
+})
+
+
 
     </script>
   </body>
